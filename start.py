@@ -10,10 +10,11 @@ import pull.insert
 URL = os.getenv('URL')
 
 # Logger configuration
-logger = logging.getLogger(os.path.basename(__file__))
-logging.basicConfig(level = logging.INFO, format = '%(asctime)s - %(levelname)-8s - %(name)s - %(message)s')
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 logger.info("Loading function...")
+logger.info(os.environ)
 
 # Lambda function
 def lambda_handler(event, context):

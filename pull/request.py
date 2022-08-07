@@ -4,9 +4,6 @@ import re
 import requests
 import warnings
 
-# Logger configuration
-logger = logging.getLogger(os.path.basename(__file__))
-
 # Request function
 def request(URL):
     # Disable warnings
